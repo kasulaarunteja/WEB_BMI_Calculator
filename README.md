@@ -3,6 +3,7 @@
 ## Submission Instructions [Please note]
 
 ## Maximum Marks - 9
+
 ```
  ✅ able to submit the app - 1 mark ( minimum score )
  ✅ Check BMI - 1 marks.
@@ -39,11 +40,13 @@
 
 - In the template you have 2 input:number for weight and height.
 - When user clicks on the button show the BMI of the user in the span tag with an id:- `bmi`.
-- When append it to the dom make sure you don't show more that one number in decimal. 
+- When append it to the dom make sure you don't show more that one number in decimal.
 - Formula to calculate bmi = weight/(height^2)
+
 ```
 bmi.textcontent = bmiValue.toFixed(1);
 ```
+
 - Now user should have a status based on his bmi.
   1. bmi < 18.5 -> `UnderWeight`.
   2. bmi >= 18.5 && bmi <= 24.9 -> `Normal Weight`.

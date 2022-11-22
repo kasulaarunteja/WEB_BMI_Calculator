@@ -5,41 +5,40 @@
   </head>
 
   <body>
-
     <h1>BMI Calculator</h1>
     <h3>Enter Your Height Here</h3>
     <input placeholder="Height in 0cm" type="number" id="height" />
-    
+
     <h3>Enter Your Weight Here</h3>
     <input placeholder="Weight in 0kg" type="number" id="weight" />
     <button id="calculate">Calculate</button>
     <h1>
-      Your BMI is:- <span id="bmi"></span>, that means you are
+      Your BMI is:-
+      <span id="bmi"></span>
+      , that means you are
       <span id="status"></span>
     </h1>
   </body>
   <script>
-
-    document.querySelector("#calculate").addEventListener("click", myfun)
+    document.querySelector('#calculate').addEventListener('click', myfun)
 
     function myfun(event) {
-      let b = document.querySelector("#height").value;
-      let a = document.querySelector("#weight").value;
-      let val = (a*100/b ** 2) *100;
-      let bmi = Math.round(val *100)/100.0;
+      let b = document.querySelector('#height').value
+      let a = document.querySelector('#weight').value
+      let val = ((a * 100) / b ** 2) * 100
+      let bmi = Math.round(val * 100) / 100.0
       // let bmi = a/(b^2)
 
-      if(bmi <=18.4) {
-            document.querySelector("#status").innerText = bmi + "UnderWeight"
-        } else if (bmi >= 18.5 && bmi <= 24.9) {
-            document.querySelector("#status").innerText =bmi +  "Normal Weight"
-        } else if (bmi >= 25 && bmi <= 29.9) {
-            document.querySelector("#status").innerText = bmi + "Overweight"
-        } else if (bmi >= 30) {
-            document.querySelector("#status").innerText = bmi +  "Obese"
-        }
-        document.querySelector("#bmi")
+      if (bmi <= 18.4) {
+        document.querySelector('#status').innerText = bmi + 'UnderWeight'
+      } else if (bmi >= 18.5 && bmi <= 24.9) {
+        document.querySelector('#status').innerText = bmi + 'Normal Weight'
+      } else if (bmi >= 25 && bmi <= 29.9) {
+        document.querySelector('#status').innerText = bmi + 'Overweight'
+      } else if (bmi >= 30) {
+        document.querySelector('#status').innerText = bmi + 'Obese'
+      }
+      document.querySelector('#bmi')
     }
-    
   </script>
 </html>
